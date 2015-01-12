@@ -1,0 +1,12 @@
+#ifndef BECREATIVE_GLOBAL_H
+#define BECREATIVE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(BECREATIVE_LIBRARY)
+#  define BECREATIVESHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define BECREATIVESHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // BECREATIVE_GLOBAL_H
