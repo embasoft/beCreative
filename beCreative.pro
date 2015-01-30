@@ -14,13 +14,19 @@ DEFINES += BECREATIVE_LIBRARY
 SOURCES += becreative.cpp \
     Core/changeshandler.cpp \
     Core/romstream.cpp \
-    Core/rom.cpp
+    Core/rom.cpp \
+    Utils/compiler.cpp \
+    Core/workerthread.cpp \
+    Utils/errorhandler.cpp
 
 HEADERS += becreative.h\
         becreative_global.h \
     Core/changeshandler.h \
     Core/romstream.h \
-    Core/rom.h
+    Core/rom.h \
+    Utils/compiler.h \
+    Core/workerthread.h \
+    Utils/errorhandler.h
 
 unix {
     target.path = /usr/lib

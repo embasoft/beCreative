@@ -1,4 +1,5 @@
 #include "rom.h"
+#include <QIODevice>
 #include <QDebug>
 
 namespace beCreative
@@ -122,7 +123,6 @@ namespace beCreative
             openStream(QIODevice::ReadOnly);
 
             QList<int> output;
-            int freeBytes = 0;
             while (!atEnd())
             {
                 char byte = readByte();
@@ -138,7 +138,6 @@ namespace beCreative
                     if (count >= minimum)
                     {
                         output.append(pos()  - count - 1);
-                        freeBytes += count;
                     }
                 }
             }
