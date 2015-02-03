@@ -1,4 +1,9 @@
 #include "compiler.h"
+#ifdef Q_OS_LINUX
+    #define COMPILER_PATH "/bin/sh"
+#elif Q_OS_WIN
+    #define COMPILER_PATH "C:\Windows\System32\cmd.exe"
+#endif
 
 namespace beCreative
 {
