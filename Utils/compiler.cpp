@@ -57,13 +57,13 @@ namespace beCreative
             arguments << "-c";
             arguments << "arm-none-eabi-as -o " + input + ".o " + input;
 
-            exec->start("/bin/sh", arguments);
+            exec->start(COMPILER_PATH, arguments);
             exec->waitForFinished();
             arguments.clear();
 
             arguments << "-c";
             arguments << "arm-none-eabi-objcopy -O binary " + input + ".o " + input + ".bin";
-            exec->start("/bin/sh", arguments);
+            exec->start(COMPILER_PATH, arguments);
 
             return true;
         }
